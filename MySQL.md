@@ -134,7 +134,7 @@
 <h2>Using between keyword</h2>
 <p>
     select * from customers <br>
-    where creditlimit between 80000 and 100000; <br>
+    where creditlimit <b>between</b> 80000 and 100000; <br>
 </p>
 
 <hr>
