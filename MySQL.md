@@ -67,5 +67,75 @@
     where cust_id=6; <br>
 </p>
 
+<hr>
+
 <h2>To delete values inside the customers</h2>
 <p>delete from customers where cust_id = 101;</p>
+
+<hr>
+
+<h2>in keyword</h2>
+<p>select * from customers where country <b>in</b> ('usa', 'france', 'spain'); </p>
+
+<hr>
+
+<h2>not keyword</h2>
+<p>select * from customers where country <b>not</b> in ('usa', 'france', 'spain');</p>
+
+<hr>
+
+<h2>To display limit keyword</h2>
+<p>select * from customers limit 10;</p>
+
+<hr>
+
+<h2>For specific range in rows</h2>
+<p>Method 1 :- </p>
+<p>select * from customers limit 10,50;</p>
+<br>
+<p>Method 2 :- </p>
+<p>select * from customers limit 5 offset 3;</p>
+
+<hr>
+
+<h2>Sorting asc and desc</h2>
+<p>
+    select * from customers order by creditlimit; <br> 
+    select * from customers order by creditlimit desc;
+</p>
+
+<hr>
+
+<h2>To display the limited rows, limit keyword</h2>
+<p>select * from customers order by creditlimit desc <b>limit</b> 1;</p>
+
+<hr>
+
+<h2>To select distinct rows of table, distinct keyword</h2>
+<p>select <b>distinct</b>(country), contactFirstName from customers <br>								-- using distinct function 
+    where country = 'usa' <br>
+    order by creditlimit; <br>
+</p>
+
+<hr>
+
+<h2>Using null or not null keyword </h2>
+<p>select * from customers <br>
+    where addressline2 is <b>not null;</b>	<br>
+</p>
+<br>
+<p>
+    select * from customers <br>
+    where state is <b>null;</b> <br>
+</p>
+
+<hr>
+
+<h2>Using between keyword</h2>
+<p>
+    select * from customers <br>
+    where creditlimit between 80000 and 100000; <br>
+</p>
+
+<hr>
+
