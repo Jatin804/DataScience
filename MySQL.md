@@ -139,3 +139,33 @@
 
 <hr>
 
+<h2>Using like operator</h2>
+<p>
+    select * from customers where contactLastName <b>like</b> '%sc%';								 in between letters  <br>
+    select * from customers where contactLastName <b>like</b> '%sc';								 in last  <br>
+    select * from customers where contactLastName <b>like</b> 'sc%';								 in starting <br>
+    select * from customers where contactLastName <b>like</b> '_rs%';                               ( _ )  -> represents for one any char <br>
+</p>
+
+<p>Cons of like operator : must define it under % or _ </p>
+<br>
+<p>Replacement : " regexp " (alternate of like operator)</p>
+
+<hr>
+
+<h2> regexp uses caret ( ^ ) -> opposite of % operators (in position of random others chars or ints)</h2>
+<p>
+    select * from customers where customerName <b>regexp</b> '^en'; 								-- no need of the % %   <br>
+    select * from customers where customerName <b>regexp</b> '^b';									-- ?   it checks through  like abc = a + ab + abc			(['xyz']) -> in stating its swld the a or y or z <br>
+    select * from coustomerName where name <b>regexp</b> 'g|eh|ac|uy';								-- g or eh or ac or uy <br>
+</p>
+
+<hr>
+
+<h2>Use of count operator </h2>
+<p>
+    select <b>count</b>( distinct city) from customers; <br>
+</p>
+
+<hr>
+
