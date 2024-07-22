@@ -1,12 +1,14 @@
 
-<h2>Some important points :- </h2>
+<h1>Some important points :- </h1>
 
 <h2> For error related safe mode of workbench, use :- </h2>
 <p>set sql_safe_updates = 0;</p>
 
+<h2>sql index starts from 1 not like other languages which starts from 0</h2>
 
 
 
+<hr>
 <hr>
 
 <h2> To check in what db you are at </h2>
@@ -164,8 +166,57 @@
 
 <h2>Use of count operator </h2>
 <p>
-    select <b>count</b>( distinct city) from customers; <br>
+    select <b>count</b>(distinct city) from customers; <br>
 </p>
 
 <hr>
 
+<h2>Using " group by "</h2>
+<p>
+    select count(country), country from customers <b>group by</b> country;	                        -- result based of groups eg. count based on country
+</p>
+
+<hr>
+
+<h2>" having " alternate of " where " clause used after group by </h2>
+<p>
+    select count(country), country from customers <br> 
+    group by country <b>having</b> count(country) < 5;
+</p>
+
+<hr>
+
+<h2>To find char lenght of a char in or not of DB </h2>
+<p>
+    select <b>char_length</b>('Hello'); <br>
+    <h4>OR -- </h4>
+    select <b>character_length</b>('Hello'); <br>
+</p>
+
+<hr>
+
+<h2>concat or concat_ws  (concat using none or using white spaces or with a defined spaces or variable)</h2>
+<p>select concat('hello', 'world');</p>
+
+<p>select concat_ws(' ', 'hello', 'world');	 <br>
+    select concat_ws('_', 'hello', 'world');		 <br>								   		-- with refrence with ' ' or '_' etc 
+    select concat_ws('...', first_name, last_name) from employees; <br>
+</p>
+
+<hr>
+
+<h2>Uppercase (ucase)</h2>
+<p>select ucase('Hello');</p>
+
+<h2>Lowercase (lcase)</h2>
+<p>select lcase('HELLOO');</p>
+
+<hr>
+
+<h2>" Trim ", trimming the white spaces</h2>
+<p>select trim('          cooldu@123           ');				    							-- removes the white spaces of right and left not mids one </p>
+
+<hr>
+
+<h2>"substr" , use -> a string concadination </h2>
+<p>select substr('sheryians', 2,5);</p>                                                         -- from 2 to next 5, <b> it cuts like start, to next point </b>
