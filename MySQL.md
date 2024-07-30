@@ -220,3 +220,88 @@
 
 <h2>"substr" , use -> a string concadination </h2>
 <p>select substr('sheryians', 2,5);</p>                                                         -- from 2 to next 5, <b> it cuts like start, to next point </b>
+
+<hr>
+
+<h2>Insert</h2>
+<p>To insert a substring into a string:</p>
+<p>SELECT INSERT('sheryains', 5, 2, 't_shirt');</p>
+<p>SELECT INSERT(last_name, 3, 0, 'kuch_bhi') AS edit FROM employees;</p>
+
+<hr>
+
+<h2>Replace</h2>
+<p>To replace a substring in a string:</p>
+<p>SELECT REPLACE('hello world', 'hello', 'hey');</p>
+
+<hr>
+
+<h2>Reverse</h2>
+<p>To reverse a string:</p>
+<p>SELECT REVERSE('hello');</p>
+
+<hr>
+
+<h2>String Comparison</h2>
+<p>To compare two strings:</p>
+<p>SELECT STRCMP('hello', 'hey');</p>
+
+<hr>
+
+<h2>Absolute Value</h2>
+<p>To find the absolute value of a number:</p>
+<p>SELECT ABS(-199);</p>
+
+<hr>
+
+<h2>Ceiling and Floor</h2>
+<p>To round a number up or down:</p>
+<p>SELECT CEIL(18.9);</p>
+<p>SELECT FLOOR(18.3);</p>
+
+<hr>
+
+<h2>Round</h2>
+<p>To round a number:</p>
+<p>SELECT ROUND(9.4);</p>
+
+<hr>
+
+<h2>Modulus</h2>
+<p>To find the remainder of a division:</p>
+<p>SELECT MOD(30, 4);</p>
+
+<hr>
+
+<h2>Random Number</h2>
+<p>To generate a random number:</p>
+<p>SELECT RAND();</p>
+<p>SELECT 100 * RAND();</p>
+
+<hr>
+
+<h2>Truncate</h2>
+<p>To truncate a number to a specific decimal place:</p>
+<p>SELECT TRUNCATE(100.23456789, 2);</p>
+<p>SELECT TRUNCATE(RAND() * 100000, 0);</p>
+
+<hr>
+
+<h2>Power</h2>
+<p>To calculate the power of a number:</p>
+<p>SELECT POW(2, 3);</p>
+
+<hr>
+
+<h2>Square Root</h2>
+<p>To calculate the square root of a number:</p>
+<p>SELECT SQRT(9);</p>
+
+<hr>
+
+<h2>Division</h2>
+<p>To perform integer division:</p>
+<p>SELECT 40 DIV 2;</p>
+
+<hr>
+
