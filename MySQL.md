@@ -6,10 +6,30 @@
 
 <h2>sql index starts from 1 not like other languages which starts from 0</h2>
 
+<h2>datatime 8byte, slow accessing, not according to timezone</h2>
+
+<h2>timestamp 4byte, fast accessing, can be converted into current timezone</h2>
+
+<h2>Foreign key | references</h2>
+<p>To connect the attributes of the parent table to chile table the we use foreign key</p>
+<p>constraint is important in condition if u want to update the foreign key behaviour</p>
+<p>create table posts( <br>
+    p_id int, <br>
+    likes int, <br>
+    u_id int, constraint fk foreign key (u_id) references users(user_id));	<br>
+</p>
+
+<h2>To drop foreign key </h2>
+<p>alter table posts drop constraint fk;</p>
+
+
 
 
 <hr>
 <hr>
+
+
+
 
 <h2> To check in what db you are at </h2>
 
@@ -302,6 +322,54 @@
 <h2>Division</h2>
 <p>To perform integer division:</p>
 <p>SELECT 40 DIV 2;</p>
+
+<hr>
+
+<h2>Data type Datetime : </h2>
+<p>To store datatime | Format : YYYY-MM-DD HH:MM:SS </p>
+<br>
+<p>create table employees( <br>
+    empl_if int,  <br>
+    empl_name varchar(50), <br>
+    joining_data datetime <br>
+    ); <br>
+</p>
+
+<hr>
+
+<h2>Timestamp datatype </h2>
+<p>To store date but according to timezone it varies </p>
+<br>
+<p>create table employees( <br>
+    empl_if int, <br> 
+    empl_name varchar(40), <br>
+    joining_date timestamp <br>
+    ); <br>
+</p>
+
+<hr>
+
+<h2>now() function in time and date </h2>
+<p>create table employees( <br>
+    empl_if int, <br>
+    empl_name varchar(40), <br>
+    created_at timestamp default now(),                						            -- will add default time <br>
+    updated_at timestamp on update now() default now()                       			-- will record update date and time  <br>
+    ); <br>
+</p>
+
+<hr>
+
+<h2>Its not possible to delete parent values if its connected to child attributes | To do so : </h2>
+<h4>{ on delete | on update : cascade | set null }</h4>
+
+<p>
+    alter table posts add constraint fk foreign key(u_id) references users(user_id) on delete cascade;							-- on delete cascade 
+
+    alter table posts add constraint fk foreign key(u_id) references users(user_id) on delete cascade on update cascade;		-- on update cascade 
+
+    alter table posts add constraint fk foreign key(u_id) references users(user_id) on delete set null; 						-- on delete set null (remains the data of child)
+</p>
 
 <hr>
 
