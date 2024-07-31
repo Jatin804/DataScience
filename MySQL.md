@@ -1,16 +1,16 @@
 
 <h1>Some important points :- </h1>
 
-<h2> For error related safe mode of workbench, use :- </h2>
+<h2>1. For error related safe mode of workbench, use :- </h2>
 <p>set sql_safe_updates = 0;</p>
 
-<h2>sql index starts from 1 not like other languages which starts from 0</h2>
+<h2>2. Sql index starts from 1 not like other languages which starts from 0</h2>
 
-<h2>datatime 8byte, slow accessing, not according to timezone</h2>
+<h2>3. Datatime 8byte, slow accessing, not according to timezone</h2>
 
-<h2>timestamp 4byte, fast accessing, can be converted into current timezone</h2>
+<h2>4. Timestamp 4byte, fast accessing, can be converted into current timezone</h2>
 
-<h2>Foreign key | references</h2>
+<h2>5. Foreign key | references</h2>
 <p>To connect the attributes of the parent table to chile table the we use foreign key</p>
 <p>constraint is important in condition if u want to update the foreign key behaviour</p>
 <p>create table posts( <br>
@@ -19,7 +19,7 @@
     u_id int, constraint fk foreign key (u_id) references users(user_id));	<br>
 </p>
 
-<h2>To drop foreign key </h2>
+<h2>6. To drop foreign key </h2>
 <p>alter table posts drop constraint fk;</p>
 
 
@@ -31,7 +31,7 @@
 
 
 
-<h2> To check in what db you are at </h2>
+<h2>To check in what db you are at </h2>
 
 <p>select database() ;</p>
 
