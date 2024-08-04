@@ -373,3 +373,59 @@
 
 <hr>
 
+<h2>Sub query | extracting data from two tables</h2>
+<p>select * from employees where department_id = (select department_id from departments where department_name = 'purchasing');</p>
+
+<p>or sub(sub(sub)) query</p>
+
+<p>select * from employees where department_id = (select department_id from departments where location_id = (select location_id from locations where city = 'southlake'));
+</p>
+
+<hr>
+
+<h2>Joins </h2>
+
+<h4>Inner join</h4>
+<p>select t.tname, s.sname <br>
+from teachers t join subject s <br>
+on t.t_id = s.techers_id ;<br>
+</p>
+
+<h4>Left join </h4>
+<p>
+    select * from teachers t left join subjects s<br>
+    on teachers.t_id = subjects.techers_id;
+</p>
+
+<h4>Right join</h4>
+<p>
+    select * from teachers t left join subjects s<br>
+    on teachers.t_id = subjects.techers_id;
+</p>
+
+<h4>Union or full join </h4>
+<p>    
+    select * from teachers t left join subjects s<br>
+    on teachers.t_id = subjects.techers_id;  <br>
+    <b>Union</b>
+    select * from teachers t left join subjects s<br>
+    on teachers.t_id = subjects.techers_id; <br>
+</p>
+
+<h4>Cross join </h4>
+<p>select * from techaers, subjects;</p>
+
+<h4>Self join | creating a copy of a table to compare with the same table </h4>
+<p>s
+    elect t1.s_id, t1.name, t1.city, t1.subject from student t1, student t2 
+    where t1.city = t2.city && t1.s_id = t2.s_id;
+</p>
+
+<hr>
+
+<h2>Using keyword for camparing </h2>
+<p>-- condition for using " using keyword " when both tables having same (fk) and (primary key)'s name.</p>
+<p>select * from employees e join departments d using (department_id);</p>
+
+<hr>
+
