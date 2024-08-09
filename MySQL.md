@@ -22,6 +22,20 @@
 <h2>6. To drop foreign key </h2>
 <p>alter table posts drop constraint fk;</p>
 
+<h2>7. To create another user</h2>
+<p>CREATE USER 'username'@'host' IDENTIFIED BY 'password';</p>
+
+<h2>8. User PRIVILEGES, to limit the access of accessing users like clint and admin </h2>
+<p>GRANT PRIVILEGE ON database.table TO 'username'@'host';</p>
+<p>*.* <- for all</p>
+
+<h2>9. To Revoke, take take all privilegrs</h2>
+<p>REVOKE ALL PRIVILEGES ON *.* FROM '<user_name>'@'localhost';</p>
+
+<h2>10.</h2>
+
+
+
 
 
 
@@ -424,8 +438,9 @@ on t.t_id = s.techers_id ;<br>
 <hr>
 
 <h2>Using keyword for camparing </h2>
-<p>-- condition for using " using keyword " when both tables having same (fk) and (primary key)'s name.</p>
+<p>Condition for using " using keyword " when both tables having same (fk) and (primary key)'s name.</p>
 <p>select * from employees e join departments d using (department_id);</p>
 
 <hr>
 
+Data functions, Views, Users, Delimiters, Functional dependencies <- pending to write
