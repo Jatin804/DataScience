@@ -443,4 +443,4 @@ on t.t_id = s.techers_id ;<br>
 
 <hr>
 
-Data functions, Views, Users, Delimiters, Functional dependencies <- pending to write
+Data functions, Views, Users, Delimiters, Functional dependencies, case <- pending to write
