@@ -55,6 +55,27 @@ GRANT PRIVILEGE ON *.* TO 'username'@'host';
 REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';
 ```
 
+## 10. User 
+Creating a User
+```sql
+CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+```
+
+Granting Privileges
+```sql
+GRANT SELECT, INSERT, UPDATE ON mydb.* TO 'new_user'@'localhost';
+```
+
+Revoking Privileges
+```sql
+REVOKE INSERT, UPDATE ON mydb.* FROM 'new_user'@'localhost';
+```
+
+Deleting a User
+```sql
+DROP USER 'new_user'@'localhost';
+```
+
 ---
 
 # Notes
@@ -490,3 +511,42 @@ select * from employees
 where department_id = (select department_id from departments where location_id = (select location_id from locations where city = 'Southlake'));
 ```
 
+## Delimiters
+Why use Delimiters? 
+- Helps define the start and end of a procedure, function, or trigger when multiple SQL statements are used.
+
+#### Changing the Delimiter
+
+```sql
+DELIMITER //
+CREATE PROCEDURE GetEmployeeDetails()
+BEGIN
+    SELECT * FROM employees;
+END //
+DELIMITER ;
+```
+
+## CASE Statements
+### Simple CASE
+
+```sql
+SELECT employee_id, first_name, 
+CASE department_id
+    WHEN 10 THEN 'HR'
+    WHEN 20 THEN 'IT'
+    ELSE 'Other'
+END AS department_name
+FROM employees;
+```
+
+### CASE with Conditions
+
+```sql
+SELECT employee_id, first_name, 
+CASE 
+    WHEN salary > 50000 THEN 'High Salary'
+    WHEN salary BETWEEN 30000 AND 50000 THEN 'Medium Salary'
+    ELSE 'Low Salary'
+END AS salary_category
+FROM employees;
+```
