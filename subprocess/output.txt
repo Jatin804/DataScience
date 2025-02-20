@@ -1,0 +1,8 @@
+total 28
+drwxr-xr-x 3 Jatin users 4096 Feb 20 23:48 .
+drwxr-xr-x 7 Jatin users 4096 Feb 20 22:29 ..
+-rw-r--r-- 1 Jatin users    0 Feb 20 23:53 output.txt
+-rw-r--r-- 1 Jatin users 5032 Feb 20 23:53 test.ipynb
+-rw-r--r-- 1 Jatin users 1386 Feb 20 23:48 test.py
+-rw-r--r-- 1 Jatin users   31 Feb 20 23:40 text.txt
+drwxr-xr-x 6 Jatin users 4096 Feb 20 22:48 .venv
